@@ -16,6 +16,10 @@ class ToolKit {
 		//		print(#line, #file, #column, #function)
 		print("func: \(funcString) file: \(file) line: \(line) msg: \(items)")
 	}
+	
+	public class func version () -> String {
+		return TKVersion
+	}
 }
 
 

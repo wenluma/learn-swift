@@ -9,6 +9,9 @@
 import Foundation
 
 class ToolKit {
+	
+	private static let TKVersion = "0.0" // 常量，不可变 let 声明
+	
 	public class func TKLog(funcString: String = #function, file: String = #file, line: Int = #line, items: Any...) {
 		//		print(#line, #file, #column, #function)
 		print("func: \(funcString) file: \(file) line: \(line) msg: \(items)")

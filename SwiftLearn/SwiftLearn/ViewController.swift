@@ -13,6 +13,11 @@ class ViewController: UIViewController {
 	var items : [UIButton]? /* 数组 [] 表示 */
 	var images : [String : String]? /* 字典 [] 表示 前key，后 value */
 
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+		items = [UIButton]()
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.

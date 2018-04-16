@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
 	var items : [UIButton]? /* 数组 [] 表示 */
+	var images : [String : String]? /* 字典 [] 表示 前key，后 value */
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.

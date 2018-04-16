@@ -39,6 +39,17 @@ class ViewController: UIViewController {
 		for name in names {
 			ToolKit.TKLog(name)
 		}
+		
+		/* switch value can be string, value 可以是一个 where 语句 */
+		let country = "China"
+		switch country {
+		case "Chinese":
+			ToolKit.TKLog("\(country) is Chinese")
+		case let x where x.hasSuffix("pepper"):
+			ToolKit.TKLog("\(country) is not pepper")
+		default:
+			ToolKit.TKLog("\(country) is my country")
+		}
 	}
 
 	override func didReceiveMemoryWarning() {

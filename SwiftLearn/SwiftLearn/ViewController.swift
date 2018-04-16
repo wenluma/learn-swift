@@ -26,6 +26,12 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		let jack : String? = nil;
+		if (jack != nil) {
+			ToolKit.TKLog(items: "jack is a person")
+		} else {
+			ToolKit.TKLog(items: "jack is nil")
+		}
 	}
 
 	override func didReceiveMemoryWarning() {

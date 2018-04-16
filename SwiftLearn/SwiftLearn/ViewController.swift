@@ -50,6 +50,17 @@ class ViewController: UIViewController {
 		default:
 			ToolKit.TKLog("\(country) is my country")
 		}
+		
+		/* 对 language 字典的遍历处理 */
+		let languages = ["java" : 1990, "C" : 1980, "C++" : 1991]
+		for (lang, age) in languages {
+			if ( age > 1990 ) {
+				ToolKit.TKLog(lang)
+			}
+			else {
+				ToolKit.TKLog(lang)
+			}
+		}
 	}
 
 	override func didReceiveMemoryWarning() {

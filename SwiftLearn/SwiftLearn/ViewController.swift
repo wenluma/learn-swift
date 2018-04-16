@@ -78,8 +78,18 @@ class ViewController: UIViewController {
 		for num in 1..<5 { //1,2,3,4
 			ToolKit.TKLog(num)
 		}
+		
+		ToolKit.TKLog(helloSwift(to: "swfit"))
+		ToolKit.TKLog(helloSwift("jack"))
 	}
-
+	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
+	func helloSwift(to person: String) -> String {
+		return person
+	}
+	func helloSwift(_ person: String) -> String {
+		return person
+	}
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.

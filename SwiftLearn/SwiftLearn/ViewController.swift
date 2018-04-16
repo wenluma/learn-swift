@@ -33,6 +33,8 @@ class ViewController: UIViewController {
 			ToolKit.TKLog(items: "jack is nil")
 		}
 		
+		ToolKit.TKLog("hi \(jack ?? "A")") /* A ?? any  ,如果 A = nil， 取any*/
+		
 		let names = ["jack", "joss", "stevence"]
 		for name in names {
 			ToolKit.TKLog(name)

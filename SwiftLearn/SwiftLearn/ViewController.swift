@@ -70,6 +70,14 @@ class ViewController: UIViewController {
 			repeat {
 			} while (condition)
 		*/
+		
+		/*
+		[) = ..< 半开半闭
+		[] = ... 全闭
+		*/
+		for num in 1..<5 { //1,2,3,4
+			ToolKit.TKLog(num)
+		}
 	}
 
 	override func didReceiveMemoryWarning() {

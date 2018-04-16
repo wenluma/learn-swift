@@ -32,6 +32,11 @@ class ViewController: UIViewController {
 		} else {
 			ToolKit.TKLog(items: "jack is nil")
 		}
+		
+		let names = ["jack", "joss", "stevence"]
+		for name in names {
+			ToolKit.TKLog(name)
+		}
 	}
 
 	override func didReceiveMemoryWarning() {

@@ -61,6 +61,15 @@ class ViewController: UIViewController {
 				ToolKit.TKLog(lang)
 			}
 		}
+		
+		/* while :
+			while (condition) {
+			}
+		
+			没有 do
+			repeat {
+			} while (condition)
+		*/
 	}
 
 	override func didReceiveMemoryWarning() {

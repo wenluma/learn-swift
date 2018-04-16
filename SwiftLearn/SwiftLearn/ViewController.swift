@@ -92,7 +92,12 @@ class ViewController: UIViewController {
 		return person
 	}
 	func helloSwift(_ person: String) -> String {
-		return person
+		/* nest func; 输入 string， 输出 Int, func(String -> Int)； func可以做为一个参数，也可以做为一个返回类型  */
+		func toSwift() -> String {
+			return person + " is leaning swift"
+		}
+		
+		return toSwift()
 	}
 	
 	override func didReceiveMemoryWarning() {

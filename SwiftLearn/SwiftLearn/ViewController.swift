@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		items = [UIButton]()
+		images = [String : String]()
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 	}
 	

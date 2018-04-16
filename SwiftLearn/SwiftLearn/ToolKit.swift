@@ -22,6 +22,10 @@ class ToolKit {
 		//		print(#line, #file, #column, #function)
 		print("func: \(funcString) file: \(file) line: \(line) msg: \(items)")
 	}
+	public class func TKLog(funcString: String = #function, file: String = #file, line: Int = #line, _ item: Any) {
+		//		print(#line, #file, #column, #function)
+		print("func: \(funcString) file: \(file) line: \(line) msg: \(item)")
+	}
 	
 	public class func version () -> String {
 		return TKVersion

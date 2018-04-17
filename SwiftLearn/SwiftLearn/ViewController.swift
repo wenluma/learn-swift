@@ -86,6 +86,12 @@ class ViewController: UIViewController {
 		let cat = ("red", 1, "beijing")
 		ToolKit.TKLog(cat.0)
 		
+		/* closure 闭包，{} 之间； ()内是参数， -> String 返回类型， in 之后， 是实现 */
+		let retName = { (name: String) -> String in
+			return name
+		}
+		ToolKit.TKLog(retName("hello closure"))
+		
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -96,7 +102,6 @@ class ViewController: UIViewController {
 		func toSwift() -> String {
 			return person + " is leaning swift"
 		}
-		
 		return toSwift()
 	}
 	

@@ -46,4 +46,13 @@ class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
 	override func simpleDescription() -> String {
 		return "A square with sides of length \(sideLength)."
 	}
+	
+	var perimeter: Double { /* compute property */
+		get { /* 通过 get 获取结果 */
+			return 4.0 * sideLength
+		}
+		set { /* 通过 set 设置 */
+			sideLength = newValue / 4.0 /* newValue default 值*/
+		}
+	}
 }

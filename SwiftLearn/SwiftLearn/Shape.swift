@@ -51,8 +51,8 @@ class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
 		get { /* 通过 get 获取结果 */
 			return 4.0 * sideLength
 		}
-		set { /* 通过 set 设置 */
-			sideLength = newValue / 4.0 /* newValue default 值*/
+		set (__perimeter){ /* 通过 set 设置 */
+			sideLength = __perimeter / 4.0 /* __perimeter 指定变量名，不用 newValue default 值*/
 		}
 	}
 }

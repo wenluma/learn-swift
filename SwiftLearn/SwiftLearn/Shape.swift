@@ -19,4 +19,8 @@ class Shape {
 	init(name: String) {
 		self.name = name
 	}
+	
+	convenience init() {
+		self.init(name: "unknow")
+	}
 }

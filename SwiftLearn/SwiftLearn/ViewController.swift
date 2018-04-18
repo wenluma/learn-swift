@@ -91,7 +91,7 @@ class ViewController: UIViewController {
 			return name
 		}
 		ToolKit.TKLog(retName("hello closure"))
-		
+		useShape()
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

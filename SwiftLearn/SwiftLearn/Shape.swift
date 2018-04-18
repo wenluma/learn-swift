@@ -23,4 +23,8 @@ class Shape {
 	convenience init() {
 		self.init(name: "unknow")
 	}
+	
+	deinit { /* 资源释放操作，可以放这样，也可以查看释放被释放掉 */
+		print("\(self)'s [\(name)] is deinit")
+	}
 }

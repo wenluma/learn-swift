@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520510832086DA85005A98BD /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520510822086DA85005A98BD /* Shape.swift */; };
 		529088FC2080402B00C947DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529088FB2080402B00C947DD /* AppDelegate.swift */; };
 		529088FE2080402B00C947DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529088FD2080402B00C947DD /* ViewController.swift */; };
 		529089012080402B00C947DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529088FF2080402B00C947DD /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520510822086DA85005A98BD /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		529088F82080402B00C947DD /* SwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529088FB2080402B00C947DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529088FD2080402B00C947DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				529088FB2080402B00C947DD /* AppDelegate.swift */,
 				529088FD2080402B00C947DD /* ViewController.swift */,
 				52908929208044F700C947DD /* ToolKit.swift */,
+				520510822086DA85005A98BD /* Shape.swift */,
 				529088FF2080402B00C947DD /* Main.storyboard */,
 				529089022080402C00C947DD /* Assets.xcassets */,
 				529089042080402C00C947DD /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				529088FE2080402B00C947DD /* ViewController.swift in Sources */,
 				5290892A208044F700C947DD /* ToolKit.swift in Sources */,
 				529088FC2080402B00C947DD /* AppDelegate.swift in Sources */,
+				520510832086DA85005A98BD /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

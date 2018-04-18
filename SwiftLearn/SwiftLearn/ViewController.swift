@@ -109,7 +109,12 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
+// MARK: class use
+	func useShape() {
+		let shape = Shape() // 类初始化
+		shape.numberOfSides = 2
+		shape.simpleDescription()
+	}
 
 }
 

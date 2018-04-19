@@ -8,6 +8,33 @@
 
 import Foundation
 
+/* enum 扑克牌上的数字
+	enum 语法，可以指定 类型，Int or String ;
+	可以有方法 description;
+	访问方式 .ace 等；
+	rawValue 对应枚举值
+*/
+enum Rank : Int {
+	case ace = 1 // 每个case 一行
+	case two, three, four, five, six, seven, eight, nine, ten // 多个用 , 分隔
+	case jack, queen, king
+	
+	func description () -> String {
+		switch self {
+		case .ace:
+			return "ace"
+		case .jack:
+			return "jack"
+		case .queen:
+			return "queen"
+		case .king:
+			return "king"
+		default:
+			return String(self.rawValue)// rawValue 代表数字值
+		}
+	}
+}
+
 /* class， 声明 class 开头， 内有变量，var，常量 let，已经 方法 func */
 class Shape {
 	var numberOfSides = 0 /* 变量要初始化 */

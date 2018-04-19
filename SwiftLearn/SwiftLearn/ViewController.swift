@@ -92,6 +92,7 @@ class ViewController: UIViewController {
 		}
 		ToolKit.TKLog(retName("hello closure"))
 		useShape()
+		useEnum()
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -119,6 +120,18 @@ class ViewController: UIViewController {
 		let square :Square? = Square(sideLength: 4, name: "Square")
 		square?.sideLength = 8 /* 初始化完成之后，才会调用 willSet, didSet */
 	}
-
+	
+//	MAR: enum
+	func useEnum() {
+		let ace = Rank.ace //声明enum
+		let x = Rank(rawValue: 11) // 通过rawValue 获取 Rank， optional value
+		print(x?.description() ?? "unknow value")
+		switch ace {
+		case .ace:
+			print(ace.description())
+		default:
+			print("default")
+		}
+	}
 }
 

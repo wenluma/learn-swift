@@ -132,6 +132,19 @@ class ViewController: UIViewController {
 		default:
 			print("default")
 		}
+		
+//		enum 实例，当作一个store property 的属性，来存储数据
+		let success = ServerResponse.result("6:00 am", "8:09 pm")
+		let failure = ServerResponse.failure("Out of cheese.")
+		let error = ServerResponse.error(404, "not find server")
+		switch success {
+		case let .result(sunrise, sunset):
+			print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+		case let .failure(message):
+			print("Failure...  \(message)")
+		case let .error(errorCode, errorDescription):
+			print("Error...code: \(errorCode)  \(errorDescription)")
+		}
 	}
 }
 

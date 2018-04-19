@@ -35,6 +35,13 @@ enum Rank : Int {
 	}
 }
 
+/* enum 的实例，类似，关联对象，将变量存储起来使用 */
+enum ServerResponse {
+	case result(String, String)
+	case failure(String)
+	case error(Int, String)
+}
+
 /* class， 声明 class 开头， 内有变量，var，常量 let，已经 方法 func */
 class Shape {
 	var numberOfSides = 0 /* 变量要初始化 */

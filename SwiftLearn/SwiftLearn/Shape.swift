@@ -30,10 +30,17 @@ class Shape {
 }
 
 class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
-	var sideLength: Double
+	var sideLength: Double {
+		willSet {/* 设置之前做 newValue 未设定的 */
+			print("will Set sideLength newValue is \(newValue)")
+		}
+		didSet {/* 设置之后做 oldValue 已设定 */
+			print("did Set sideLength oldValue is \(oldValue)")
+		}
+	}
 	
 	init(sideLength: Double, name: String) {// 1. 先自身变量初始化，2 父类初始化 3 父类变量change
-		self.sideLength = sideLength /* 要在super.init 之前调用，初始化的顺序决定的 */
+		self.sideLength = sideLength /* 要在super.init 之前调用，初始化的顺序决定的; 初始化时，不会调用 willSet, didSet，在初始化之后回调用 */
 		super.init(name: name)/* 对super 进行初始化操作 */
 		numberOfSides = 4 /* super 变量改变，要走 super.init 之后 */
 	}

@@ -114,6 +114,9 @@ class ViewController: UIViewController {
 		let shape = Shape() // 类初始化
 		shape.numberOfSides = 2
 		shape.simpleDescription()
+		
+		let square = Square(sideLength: 4, name: "Square")
+		square.sideLength = 8 /* 初始化完成之后，才会调用 willSet, didSet */
 	}
 
 }

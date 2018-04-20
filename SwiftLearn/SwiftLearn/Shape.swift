@@ -42,6 +42,14 @@ enum ServerResponse {
 	case error(Int, String)
 }
 
+/* struct 类的使用一样，唯一的不同时，赋值的时候，是值 copy， 类是 reference 引用 */
+struct Card {
+	var rank : Rank
+	func description() -> String {
+		return rank.description()
+	}
+}
+
 /* class， 声明 class 开头， 内有变量，var，常量 let，已经 方法 func */
 class Shape {
 	var numberOfSides = 0 /* 变量要初始化 */

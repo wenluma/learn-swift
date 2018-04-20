@@ -93,6 +93,7 @@ class ViewController: UIViewController {
 		ToolKit.TKLog(retName("hello closure"))
 		useShape()
 		useEnum()
+		useStruct()
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -145,6 +146,11 @@ class ViewController: UIViewController {
 		case let .error(errorCode, errorDescription):
 			print("Error...code: \(errorCode)  \(errorDescription)")
 		}
+	}
+	
+//MARK: struct
+	func useStruct() {
+		let card = Card(rank: .ace)
 	}
 }
 

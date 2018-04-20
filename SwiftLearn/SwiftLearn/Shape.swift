@@ -8,6 +8,12 @@
 
 import Foundation
 
+/* 定义Error，throw 使用 */
+enum PrinterError: Error {
+	case outOfPaper
+	case noToner
+	case onFire
+}
 
 /* protocol 协议定义，
 可以作用于 class, struct, enum 上 */
@@ -113,8 +119,13 @@ class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
 		numberOfSides = 4 /* super 变量改变，要走 super.init 之后 */
 	}
 	
-	func area() -> Double {
-		return sideLength * sideLength
+	/* throws 在参数之后；内部是 throw Error */
+	func area() throws -> Double {
+		let area = sideLength * sideLength
+		if area < 0 {
+			throw PrinterError.noToner
+		}
+		return area
 	}
 	
 	/* 重写 super 的 方法，前面要用 override */

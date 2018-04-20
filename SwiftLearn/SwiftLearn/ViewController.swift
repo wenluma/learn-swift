@@ -121,6 +121,16 @@ class ViewController: UIViewController {
 		/* optional value ? 如何前者为 nil， 整个语句为 nil，如果为正常对象，则需要 unwrap 使用，如 square?; 整个句子时 optional 语句 */
 		let square :Square? = Square(sideLength: 4, name: "Square")
 		square?.sideLength = 8 /* 初始化完成之后，才会调用 willSet, didSet */
+		/* catch 捕获异常 do {try} catch {} */
+		do {
+			let area = try square?.area() //try 的使用地方
+		} catch PrinterError.noToner {
+			
+		} catch let printerError as PrinterError {
+			print("Printer error: \(printerError).")
+		} catch {
+			print(error)
+		}
 	}
 	
 //	MAR: enum

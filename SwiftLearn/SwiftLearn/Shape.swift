@@ -56,6 +56,7 @@ enum ServerResponse {
 /* struct 类的使用一样，唯一的不同时，赋值的时候，是值 copy， 类是 reference 引用 */
 struct Card {
 	var rank : Rank
+	var numberOfSides : Int
 	func description() -> String {
 		return rank.description()
 	}

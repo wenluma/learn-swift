@@ -150,7 +150,7 @@ class ViewController: UIViewController {
 	
 //MARK: struct
 	func useStruct() {
-		let card = Card(rank: .ace)
+		let card = Card(rank: .ace, numberOfSides: 4)
 	}
 }
 

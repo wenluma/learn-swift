@@ -62,6 +62,20 @@ struct Card {
 	}
 }
 
+/* extension 扩展于 oc 一样，是对方法的扩展，不能对stored property 的扩展，故都是方法；
+可以作用于libary, 已有的Class 等。
+通过 extension 来实现 协议
+*/
+extension Card : ShapeInfoProtocol {
+	var name : String {
+		return "self is card"
+	}
+	mutating func simpleDescription() -> String {
+		return "card is \(rank.description())"
+	}
+
+}
+
 /* class， 声明 class 开头， 内有变量，var，常量 let，已经 方法 func */
 class Shape : ShapeInfoProtocol {
 	var numberOfSides = 0 /* 变量要初始化 */

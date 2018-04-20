@@ -8,6 +8,17 @@
 
 import Foundation
 
+
+/* protocol 协议定义，
+可以作用于 class, struct, enum 上 */
+protocol ShapeInfoProtocol {
+	var name : String {get} // 代表 let
+	var numberOfSides : Int { get set }// 代表变量
+/* 定义方法 mutating 对class 可以不用写，class 本身支持对变量的修改;
+	struct enum 则要写，重写了它本身，值copy  */
+	mutating func simpleDescription() -> String;
+}
+
 /* enum 扑克牌上的数字
 	enum 语法，可以指定 类型，Int or String ;
 	可以有方法 description;

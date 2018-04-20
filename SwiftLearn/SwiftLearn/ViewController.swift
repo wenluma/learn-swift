@@ -94,6 +94,7 @@ class ViewController: UIViewController {
 		useShape()
 		useEnum()
 		useStruct()
+		useProtocols()
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -151,6 +152,17 @@ class ViewController: UIViewController {
 //MARK: struct
 	func useStruct() {
 		let card = Card(rank: .ace, numberOfSides: 4)
+	}
+	
+//	use protocols 使用多态，可以方便使用，不需要关注具体的对象，直接调用协议方法
+	func useProtocols() {
+		var shapeInfos : [ShapeInfoProtocol] = []
+		shapeInfos.append(Card(rank: .jack, numberOfSides: 4))
+		shapeInfos.append(Shape())
+		
+		for info in shapeInfos {
+			print(info.name)
+		}
 	}
 }
 

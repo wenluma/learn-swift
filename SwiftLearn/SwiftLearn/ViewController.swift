@@ -95,6 +95,7 @@ class ViewController: UIViewController {
 		useEnum()
 		useStruct()
 		useProtocols()
+		ToolKit.TKLog("defer using:\(useDefer())" )
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -177,6 +178,17 @@ class ViewController: UIViewController {
 		for info in shapeInfos {
 			print(info.name)
 		}
+	}
+	
+	/* defer 的使用，可以认为是在return 之后进行。useDefer() 走完毕之后，看到的结果是 needDefer =1, 而return 的结果是 2，可以得出此结论 */
+	var needDefer = 0
+	func useDefer() -> Int {
+		needDefer = 2
+		defer {
+			needDefer = 1
+			ToolKit.TKLog("needDefer number is : \(needDefer)")
+		}
+		return needDefer;
 	}
 }
 

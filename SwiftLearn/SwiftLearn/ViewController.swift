@@ -103,6 +103,7 @@ class ViewController: UIViewController {
 		最好不用默认值如 var 做变量 */
 		var red, blue, gree : UIColor?
 		var `var` = 0.0 // 强烈不推荐
+		let min = UInt.min, max = UInt.max //基本数据类型的边界值 bounds
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

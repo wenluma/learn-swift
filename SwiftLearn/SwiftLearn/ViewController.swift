@@ -131,6 +131,10 @@ class ViewController: UIViewController {
 		} catch {
 			print(error)
 		}
+		
+		/* 如果不用do try catch，可以这么干 */
+		let area2 = try? square?.area()
+		
 	}
 	
 //	MAR: enum

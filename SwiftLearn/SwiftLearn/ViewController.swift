@@ -106,6 +106,21 @@ class ViewController: UIViewController {
 		let min = UInt.min, max = UInt.max //基本数据类型的边界值 bounds
 		let name = "张三" //Type Safety and Type Inference,在编译阶段进行检查和推断
 		
+		/* 十进制，2进制，8进制，16进制
+		1.25e2 means 1.25 x 102, or 125.0.
+		1.25e-2 means 1.25 x 10-2, or 0.0125.”
+		0xFp2 means 15 x 22, or 60.0.
+		0xFp-2 means 15 x 2-2, or 3.75.”
+		 */
+		let decimalInteger = 17
+		let binaryInteger = 0b10001       // 17 in binary notation
+		let octalInteger = 0o21           // 17 in octal notation
+		let hexadecimalInteger = 0x11     // 17 in hexadecimal notation”
+		let 十平方 = 1.25e2
+		let 二N次方 = 0xFp2 // 15 x 4
+		let oneMillion = 1_000_000
+		let decimalInteger2Double = Double(decimalInteger) //类型转换
+
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

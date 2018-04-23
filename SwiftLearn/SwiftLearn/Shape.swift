@@ -142,3 +142,15 @@ class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
 		}
 	}
 }
+
+/* Generics 范型 作用于, T, U 未指定类型，便是范型
+1. func
+2. class, struct, enum
+where 的用法，在 {} 实现体之前
+*/
+class HttpError<T, U> : Error where T: Equatable {
+	var http : T
+	init(http:T) {
+		self.http = http
+	}
+}

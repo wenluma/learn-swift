@@ -156,6 +156,10 @@ class ViewController: UIViewController {
 		
 		/* 比较，元组 从左到右，依次比较 */
 		("blue", -1) < ("purple", 1) // OK, evaluates to true
+		
+		/* 三元操作，当针对 optional 操作时，前者 nil，取后者；否则去前者 */
+		var hello: String?
+		var coalescing = hello ?? "hello ？？"
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

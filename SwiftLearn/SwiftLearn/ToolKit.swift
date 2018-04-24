@@ -12,7 +12,7 @@ import Foundation
 typealias TKError = Error
 
 class ToolKit {
-	
+	private static let tkInfo : (version: String, descption: String) = (TKVersion, descrition)
 	/* """ 来代表 string 换行处理 */
 	private static let descrition = """
 		tool kit 是一个工具 class，用来做一些通用性的操作，比如打log，统一的逻辑处理，异常处理等。
@@ -32,6 +32,11 @@ class ToolKit {
 	
 	public class func version () -> String {
 		return TKVersion
+	}
+	
+	public class func toolKitInfo() -> (String, String) {
+		(tkInfo.0, tkInfo.1) //获取tuple 元素的方式 1
+		return (tkInfo.version, tkInfo.descption) // 获取tuple 元素的方式 2
 	}
 }
 

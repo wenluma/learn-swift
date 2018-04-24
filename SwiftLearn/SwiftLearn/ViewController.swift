@@ -128,6 +128,10 @@ class ViewController: UIViewController {
 			print("\(testNil!)") // ! unwrap optional 类型的数据，要确保 确实存在
 		}
 		
+		/* optional bind, 考虑 guard 的使用 */
+		if let first = Int("1"), let second = Int("3"), first < second {
+			print("\(first) < \(second)")
+		}
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

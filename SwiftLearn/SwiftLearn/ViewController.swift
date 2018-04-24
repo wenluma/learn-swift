@@ -121,6 +121,8 @@ class ViewController: UIViewController {
 		let oneMillion = 1_000_000
 		let decimalInteger2Double = Double(decimalInteger) //类型转换
 
+		/* nil oc 中针对一个对象指针 指向一个不存在的对象；swift 中，可以是任意类型数据，包括，对象，Int等。指这样类型的值不存在 */
+		var testNil : String? = nil
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

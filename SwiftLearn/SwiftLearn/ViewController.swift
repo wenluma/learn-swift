@@ -254,5 +254,16 @@ class ViewController: UIViewController {
 		}
 		return needDefer;
 	}
+	
+	func useRange() {
+		/*
+		1...5 1,2,3,4,5
+		1..<5 1,2,3,4
+		*/
+		let names = ["a", "b", "c", "d", "e"]
+		names[2...]// c, d, e
+		names[...2]// a, b, c
+		names[..<2] // a,b
+	}
 }
 

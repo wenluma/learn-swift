@@ -123,6 +123,11 @@ class ViewController: UIViewController {
 
 		/* nil oc 中针对一个对象指针 指向一个不存在的对象；swift 中，可以是任意类型数据，包括，对象，Int等。指这样类型的值不存在 */
 		var testNil : String? = nil
+		testNil = "not nil"
+		if testNil != nil {
+			print("\(testNil!)") // ! unwrap optional 类型的数据，要确保 确实存在
+		}
+		
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

@@ -8,6 +8,9 @@
 
 import Foundation
 
+/* typealias 主要用于类型区分，在功能模块上的划分 */
+typealias TKError = Error
+
 class ToolKit {
 	
 	/* """ 来代表 string 换行处理 */

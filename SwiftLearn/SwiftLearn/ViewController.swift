@@ -141,6 +141,9 @@ class ViewController: UIViewController {
 
 		/* fatalError 必然失败*/
 		fatalError("unimplment 未实现")
+		
+		/* string + 操作 */
+		var fullName = "gaoliang" + " miao"
 
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/

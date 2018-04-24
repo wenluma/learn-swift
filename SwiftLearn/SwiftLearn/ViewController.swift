@@ -132,6 +132,16 @@ class ViewController: UIViewController {
 		if let first = Int("1"), let second = Int("3"), first < second {
 			print("\(first) < \(second)")
 		}
+		
+		/* assert 断言*/
+		assert(testNil != nil)
+		assertionFailure("is fail when assert error")
+		/* precondition 前置判断*/
+		precondition(testNil != nil)
+
+		/* fatalError 必然失败*/
+		fatalError("unimplment 未实现")
+
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {

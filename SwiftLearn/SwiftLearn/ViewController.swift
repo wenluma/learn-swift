@@ -318,5 +318,24 @@ class ViewController: UIViewController {
 			print("\(scalar.value) ", terminator: "")
 		}
 	}
+	
+	func useArray() {
+		var shopping = ["a", "b", "c", "d"]
+		shopping += ["e", "f"] //  数组 + 和
+		shopping.removeLast()// a-e
+		shopping.insert("f", at: 5)
+		shopping.append("g")
+		
+		let i = shopping[1] //b, 取值
+		
+		for item in shopping {
+			print("item is \(item)")
+		}
+		
+//		获取数组下标及内容
+		for (index, item) in shopping.enumerated() {
+			print("item index is \(index), item is \(item)")
+		}
+	}
 }
 

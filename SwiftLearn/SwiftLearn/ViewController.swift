@@ -362,5 +362,13 @@ class ViewController: UIViewController {
 			print("key = \(key), value = \(value)")
 		}
 	}
+	
+	func useCheckAPI() {
+		if #available(iOS 11, *) {// * 不能少，其他的平台
+			
+		} else {
+			
+		}
+	}
 }
 

@@ -268,9 +268,14 @@ class ViewController: UIViewController {
 	
 	/* character 单个字符, string 中，走单个字符 */
 	func useChars() {
-		for c in "hello world!" {
+		let eAcute: Character = "\u{E9}" // unicode 编码
+		let c: Character = "❤️" //单字符串
+		var hello = "hello world!"
+		print(c)
+		for c in hello {
 			print(c)
 		}
+		hello.append(c)
 	}
 }
 

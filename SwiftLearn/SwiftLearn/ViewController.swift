@@ -265,5 +265,12 @@ class ViewController: UIViewController {
 		names[...2]// a, b, c
 		names[..<2] // a,b
 	}
+	
+	/* character 单个字符, string 中，走单个字符 */
+	func useChars() {
+		for c in "hello world!" {
+			print(c)
+		}
+	}
 }
 

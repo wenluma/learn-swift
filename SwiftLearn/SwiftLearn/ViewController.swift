@@ -337,5 +337,20 @@ class ViewController: UIViewController {
 			print("item index is \(index), item is \(item)")
 		}
 	}
+	
+	func useSet() {
+		let oddDigits: Set = [1, 3, 5, 7, 9]
+		let evenDigits: Set = [0, 2, 4, 6, 8]
+		let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+		
+		oddDigits.union(evenDigits).sorted() //合集
+		// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+		oddDigits.intersection(evenDigits).sorted() //交集
+		// []
+		oddDigits.subtracting(singleDigitPrimeNumbers).sorted()// 差集
+		// [1, 9]
+		oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted() //2个差集和
+		// [1, 2, 9]
+	}
 }
 

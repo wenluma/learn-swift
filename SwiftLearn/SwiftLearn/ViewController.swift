@@ -160,6 +160,9 @@ class ViewController: UIViewController {
 		/* 三元操作，当针对 optional 操作时，前者 nil，取后者；否则去前者 */
 		var hello: String?
 		var coalescing = hello ?? "hello ？？"
+		
+		var num = 10
+		modifyInout(num: &num) // num = 13
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -381,5 +384,9 @@ class ViewController: UIViewController {
 		}
 		return total
 	}
+	
+	/* inout 标记的参数，可以在func内部，修改它 */
+	func modifyInout(num: inout Int) {
+		num += 3
 	}
 }

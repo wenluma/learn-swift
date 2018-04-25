@@ -365,10 +365,9 @@ class ViewController: UIViewController {
 	
 	func useCheckAPI() {
 		if #available(iOS 11, *) {// * 不能少，其他的平台
-			
+			let _ = useDefer() // 消除 unused 的警告
 		} else {
 			
 		}
 	}
 }
-

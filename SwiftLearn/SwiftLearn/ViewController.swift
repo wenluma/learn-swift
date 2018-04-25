@@ -352,5 +352,15 @@ class ViewController: UIViewController {
 		oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted() //2个差集和
 		// [1, 2, 9]
 	}
+	
+	func useDict() {
+//		key must Hashable
+		var airports = ["luoyang" : 101, "beijing": 102, "xian" : 103]
+		airports["luoyang"] = nil
+		airports["hangzhou"] = 105
+		for (key, value) in airports {
+			print("key = \(key), value = \(value)")
+		}
+	}
 }
 

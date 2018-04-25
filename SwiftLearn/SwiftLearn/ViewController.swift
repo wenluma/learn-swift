@@ -277,5 +277,46 @@ class ViewController: UIViewController {
 		}
 		hello.append(c)
 	}
+	
+	func useString() {
+		//取索引
+		var hello = "hello world!"
+		let c1 = hello[hello.startIndex] // "h"
+		let e1 = hello[hello.index(before: hello.endIndex)] // "!"
+		let c2 = hello[hello.index(hello.startIndex, offsetBy: 2)] // L
+		let index = hello.index(of: " ")
+		
+		// 遍历
+		let greeting = "摘录来自: Apple Inc. “The Swift Programming Language (Swift 4)。” iBooks."
+		for index in greeting.indices {
+			print("\(greeting[index]) ", terminator: "")
+		}
+		
+		// insert
+		hello.insert("❤️", at: hello.index(of: " ")!)
+		hello.insert(contentsOf: " Chinese", at: hello.index(before: hello.endIndex))
+		
+//		remove
+		let range = hello.index(hello.endIndex, offsetBy: -6)..<hello.endIndex
+		hello.removeSubrange(range)
+		
+//		sub string
+		let sub = String(hello[range]) // 重新分配内存
+		
+		//前缀
+		sub.hasPrefix("hello")
+		sub.hasSuffix("!") //后缀
+		
+//		utf8, utf16, unicodeScalars 的各种编码
+		let dogString = "dog is 🐶!"
+//		dogString.utf16
+//		dogString.unicodeScalars
+		for codeUnit in dogString.utf8 { // dogString.u
+			print("\(codeUnit) ", terminator: "")
+		}
+		for scalar in dogString.unicodeScalars {
+			print("\(scalar.value) ", terminator: "")
+		}
+	}
 }
 

@@ -370,4 +370,16 @@ class ViewController: UIViewController {
 			
 		}
 	}
+	/*
+	同类型，可变参数 ，至多一个可变类型。
+	所以的参数，都是常量 const 类型的，不可以修改
+	*/
+	func moreVaryParams(_ numbers: Double...) -> Double {
+		var total : Double = 0.0
+		for num in numbers {
+			total += num
+		}
+		return total
+	}
+	}
 }

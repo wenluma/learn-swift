@@ -38,6 +38,13 @@ class ToolKit {
 		(tkInfo.0, tkInfo.1) //获取tuple 元素的方式 1
 		return (tkInfo.version, tkInfo.descption) // 获取tuple 元素的方式 2
 	}
+	
+	/* string is value type:
+	在必要的时候，才会进行copy
+	没有修改的时候，是不会发生copy操作的， 为了保证性能 */
+	public class func encode(userInfo: Any) -> String {
+		return "\(userInfo)"
+	}
 }
 
 

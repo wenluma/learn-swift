@@ -398,4 +398,16 @@ class ViewController: UIViewController {
 		let add : (Int, Int) -> Int = addF(a:b:)
 		_ = add( 3, 4) // 无引用忽略
 	}
+	
+	func fNest(add : Bool) {
+//		nest 函数： 函数嵌套；在函数中，没有静态变量了，需要结构体or class 来存储静态变量
+		var a :Int = 0
+		func addFunc() -> Int{
+			return a+1
+		}
+		func  subtractFunc() ->Int {
+			return a-1
+		}
+		a = add ? addFunc() : subtractFunc()
+	}
 }

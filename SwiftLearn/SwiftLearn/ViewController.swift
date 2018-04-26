@@ -448,6 +448,5 @@ class ViewController: UIViewController {
 			return b
 		}
 		print("sub3 \(sub3(10)), sum = \(sum)")
-
 	}
 }

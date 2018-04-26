@@ -135,12 +135,12 @@ class ViewController: UIViewController {
 		
 		/* assert 断言*/
 		assert(testNil != nil)
-		assertionFailure("is fail when assert error")
+//		assertionFailure("is fail when assert error")
 		/* precondition 前置判断*/
 		precondition(testNil != nil)
 
 		/* fatalError 必然失败*/
-		fatalError("unimplment 未实现")
+//		fatalError("unimplment 未实现")
 		
 		/* string + 操作 */
 		var fullName = "gaoliang" + " miao"
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
 		closure1(10, b4a: {(a : Int) -> Int in return a*4})
 		closure1(10) {(a : Int) -> Int in return a*4}// trailing closure 可以在函数之外的写法
 		closure1(10) { $0 * 4} //类型推断, 类型名，$0, $1, $2 等来表示
-		
+		closure2()
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -430,5 +430,24 @@ class ViewController: UIViewController {
 	
 	func closure1(_ a : Int, b4a : (Int)-> Int) {
 		print(a + b4a(a))
+	}
+	
+	func closure2() {/* closure 对 闭包之外的 captured 数据，属于引用类型。
+		闭包属于引用类型
+		*/
+		var sum = 0
+		let sub2 = {(a: Int) -> Int in
+			sum = a - 2
+			return sum
+		}
+		print("sub2 \(sub2(10)), sum = \(sum)")
+		sum = 0
+		let sub3 = {(a: Int) -> Int in
+			let b = a - 2
+			sum = b
+			return b
+		}
+		print("sub3 \(sub3(10)), sum = \(sum)")
+
 	}
 }

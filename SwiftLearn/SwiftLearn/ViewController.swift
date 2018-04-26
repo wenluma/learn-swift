@@ -410,4 +410,16 @@ class ViewController: UIViewController {
 		}
 		a = add ? addFunc() : subtractFunc()
 	}
+	
+	func closure() {
+		/* closure 闭包，可以认为是匿名函数，函数是闭包的特例 {} 直接为 closure 体； 显示类型描述， in 之后 是执行体
+		捕获外部变量
+		*/
+		let out = 10
+		let add : (Int ,Int) -> Int = {
+			(_ a : Int , _ b : Int) -> Int in
+			return a + b + out // 捕获 out 外部变量
+		}
+		print(add(5,6))
+	}
 }

@@ -449,4 +449,14 @@ class ViewController: UIViewController {
 		}
 		print("sub3 \(sub3(10)), sum = \(sum)")
 	}
+	
+	var closures : [()->Int] = []
+	/* escaping closure 指暂时被直接调用，后面会使用的闭包,需要明确的标记 */
+	func escapingClosure( c : @escaping ()-> Int) {
+		closures.append(c)
+	}
+	
+	func nonescapingClosure(c: ()-> Int) -> Int {
+		return c()
+	}
 }

@@ -168,6 +168,8 @@ class ViewController: UIViewController {
 		closure1(10) {(a : Int) -> Int in return a*4}// trailing closure 可以在函数之外的写法
 		closure1(10) { $0 * 4} //类型推断, 类型名，$0, $1, $2 等来表示
 		closure2()
+		
+		autoclosure(c: hello ?? "hi")
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -457,6 +459,11 @@ class ViewController: UIViewController {
 	}
 	
 	func nonescapingClosure(c: ()-> Int) -> Int {
+		return c()
+	}
+	
+	/* autoclosure 自动闭包，将语句，自动转换为 closure */
+	func autoclosure(c : @autoclosure () -> String) -> String {
 		return c()
 	}
 }

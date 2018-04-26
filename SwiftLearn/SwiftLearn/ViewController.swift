@@ -163,6 +163,11 @@ class ViewController: UIViewController {
 		
 		var num = 10
 		modifyInout(num: &num) // num = 13
+		
+		closure1(10, b4a: {(a : Int) -> Int in return a*4})
+		closure1(10) {(a : Int) -> Int in return a*4}// trailing closure 可以在函数之外的写法
+		closure1(10) { $0 * 4} //类型推断, 类型名，$0, $1, $2 等来表示
+		
 	}
 	/* func 函数标示， () 内参数， -> String 返回值 类型String , to label, 可以用 _ 带他，则使用时不回会出现 to*/
 	func helloSwift(to person: String) -> String {
@@ -421,5 +426,9 @@ class ViewController: UIViewController {
 			return a + b + out // 捕获 out 外部变量
 		}
 		print(add(5,6))
+	}
+	
+	func closure1(_ a : Int, b4a : (Int)-> Int) {
+		print(a + b4a(a))
 	}
 }

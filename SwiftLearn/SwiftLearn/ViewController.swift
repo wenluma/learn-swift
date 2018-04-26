@@ -389,4 +389,13 @@ class ViewController: UIViewController {
 	func modifyInout(num: inout Int) {
 		num += 3
 	}
+	
+	func addF(a : Int, b : Int) -> Int {
+		return a + b
+	}
+	
+	func fType() {
+		let add : (Int, Int) -> Int = addF(a:b:)
+		_ = add( 3, 4) // 无引用忽略
+	}
 }

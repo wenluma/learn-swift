@@ -466,4 +466,18 @@ class ViewController: UIViewController {
 	func autoclosure(c : @autoclosure () -> String) -> String {
 		return c()
 	}
+	
+	/* checking type: is (is subclass of)，,
+	as (superclass -> subClass as?, as!), */
+	func checkingType() {
+		let square = Square(sideLength: 1, name: "None")
+		let shape = square
+		if square is Shape {
+			print("square is sub class of Shape")
+		}
+		
+		if let squ = shape as? Square {
+			print("shape downcast as square")
+		}
+	}
 }

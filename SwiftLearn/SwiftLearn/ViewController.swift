@@ -519,3 +519,11 @@ class ViewController: UIViewController {
 		
 	}
 }
+
+/* extension 主要是 func 的增加 */
+extension ViewController {
+	/* error, 不能写已存在的class
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}*/
+}

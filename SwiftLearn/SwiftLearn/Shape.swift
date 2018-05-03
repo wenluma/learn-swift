@@ -154,3 +154,13 @@ class HttpError<T, U> : Error where T: Equatable {
 		self.http = http
 	}
 }
+
+/* nested type， 不仅仅是类型，也可以是 class */
+struct BlackjackCard {
+	// nested Suit enumeration
+	enum Suit: Character {
+		case spades = "♠", hearts = "♡", diamonds = "♢", clubs = "♣"
+	}
+	let suit: Suit
+}
+// BlackjackCard.Suit.spades.rowValue //对 nested 嵌套类型的使用

@@ -155,6 +155,13 @@ class HttpError<T, U> : Error where T: Equatable {
 	init(http:T) {
 		self.http = http
 	}
+//	Failable Initializers.
+	init?(h:T, h2:T) {
+		if h == h2 {
+			return nil;
+		}
+		self.http = h
+	}
 }
 
 /* nested type， 不仅仅是类型，也可以是 class */

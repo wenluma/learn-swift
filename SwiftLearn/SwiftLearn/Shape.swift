@@ -16,7 +16,9 @@ enum PrinterError: Error {
 }
 
 /* protocol 协议定义，
-可以作用于 class, struct, enum 上 */
+可以作用于 class, struct, enum 上
+Initializer Requirements, 非默认的初始化,在初始化时 required 有一个很好的优势，就是在进行多态时，会很有用的。
+*/
 protocol ShapeInfoProtocol {
 	var name : String {get} // 代表 let
 	var numberOfSides : Int { get set }// 代表变量

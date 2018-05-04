@@ -18,6 +18,11 @@ enum PrinterError: Error {
 /* protocol 协议定义，
 可以作用于 class, struct, enum 上
 Initializer Requirements, 非默认的初始化,在初始化时 required 有一个很好的优势，就是在进行多态时，会很有用的。
+protocol 是一种类型， let someClass : SomeProtocol ；结合as is 使用
+protocol delegation 结合使用
+Protocol Inheritance 协议也是可以继承的
+
+很好的一个组织形式 扩展实现协议。 extension : Protocol
 */
 protocol ShapeInfoProtocol {
 	var name : String {get} // 代表 let

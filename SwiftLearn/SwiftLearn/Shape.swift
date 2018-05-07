@@ -21,6 +21,10 @@ Initializer Requirements, 非默认的初始化,在初始化时 required 有一�
 protocol 是一种类型， let someClass : SomeProtocol ；结合as is 使用
 protocol delegation 结合使用
 Protocol Inheritance 协议也是可以继承的
+protocol 针对 class， protocol : AnyObject;
+protocol 组合， protocol1 & protocol2, 可以是一种组合类型
+protocol prefix optional, 出现 @objc 只针对 objc class 类型的。
+Protocol Extensions 提供一个默认实现，所以相关的协议，都可以公用它,类似一个基础实现
 
 很好的一个组织形式 扩展实现协议。 extension : Protocol
 */
@@ -178,3 +182,26 @@ struct BlackjackCard {
 	let suit: Suit
 }
 // BlackjackCard.Suit.spades.rowValue //对 nested 嵌套类型的使用
+
+/* protocol extension ，可以认为是一个默认实现，如果有特定的类型，来实现，支持重写，类似default 实现 */
+protocol RandomNumber {
+	func randomBool() -> Bool
+}
+
+extension RandomNumber {
+	func randomBool() -> Bool {
+		return arc4random()%10 > 5
+	}
+}
+
+extension Float : RandomNumber {
+	
+}
+
+extension Int : RandomNumber {
+	func randomBool() -> Bool {
+		print("r =  \(arc4random()%10)")
+		return arc4random()%10 > 5
+	}
+}
+

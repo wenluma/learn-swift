@@ -25,6 +25,14 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		let a : RandomNumber = 8
+		a.randomBool()
+		print(" a \(a) __");
+		let b : RandomNumber = Float(8.0)
+		b.randomBool()
+		print(" b \(b) __");
+		return
+		
 		// Do any additional setup after loading the view, typically from a nib.
 		let jack : String? = nil;
 		if (jack != nil) {

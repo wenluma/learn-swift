@@ -101,7 +101,7 @@ class Shape : ShapeInfoProtocol {
 		return "A shape with \(numberOfSides) sides."
 	}
 	
-	init(name: String) {
+	required init(name: String) {
 		self.name = name
 	}
 	
@@ -128,6 +128,10 @@ class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
 		self.sideLength = sideLength /* 要在super.init 之前调用，初始化的顺序决定的; 初始化时，不会调用 willSet, didSet，在初始化之后回调用 */
 		super.init(name: name)/* 对super 进行初始化操作 */
 		numberOfSides = 4 /* super 变量改变，要走 super.init 之后 */
+	}
+	
+	required init(name: String) {
+		fatalError("init(name:) has not been implemented")
 	}
 	
 	/* throws 在参数之后；内部是 throw Error */

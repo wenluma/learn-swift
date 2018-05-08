@@ -31,6 +31,10 @@ class ViewController: UIViewController {
 		let b : RandomNumber = Float(8.0)
 		b.randomBool()
 		print(" b \(b) __");
+		
+		let spClass = Shape.self /* class.self 获取到 class type 类型 */
+		let spInstance = spClass.init(name: "Hi") /* init 必须有 required 才可以，否则，不能进行初始化 */
+		print(spInstance.name)
 		return
 		
 		// Do any additional setup after loading the view, typically from a nib.

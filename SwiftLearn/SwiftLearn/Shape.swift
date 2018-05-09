@@ -162,6 +162,7 @@ class Square: Shape {/* 继承 class newClassName: SuperClassName {}*/
 1. func
 2. class, struct, enum
 where 的用法，在 {} 实现体之前
+class HttpError<T : Equatable, U : Equatable> : Error {
 */
 class HttpError<T, U> : Error where T: Equatable {
 	var http : T
@@ -206,6 +207,17 @@ extension Int : RandomNumber {
 	func randomBool() -> Bool {
 		print("r =  \(arc4random()%10)")
 		return arc4random()%10 > 5
+	}
+}
+
+protocol Concat {
+	associatedtype Item : Equatable
+	func add(_ it1 : Item, _ it2 : Item) -> String
+}
+
+class Sum<Item>: Concat {
+	func add(_ it1 : Item, _ it2 : Item) -> String {
+		return "\(it1) + \(it2)"
 	}
 }
 

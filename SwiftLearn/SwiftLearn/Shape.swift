@@ -221,4 +221,31 @@ class Sum <T: Equatable> : Concat {
 		return "\(it1) + \(it2)"
 	}
 }
+// MARK: arc
+/*
+ARC， 针对 class 类型，value 类型是不会有的。
+weak ,Unowned
+unowned(unsafe)
+*/
+
+class City {
+	var name : String!
+//	weak var country : Country
+	unowned var country : Country
+
+	init(_ name : String, _ country: Country) {
+		self.name = name
+		self.country = country
+	}
+}
+
+class  Country {
+	var capitalCity : City!
+	let name : String
+	init(name : String, capitalName: String) {
+		self.name = name
+		self.capitalCity = City(capitalName, self)
+	}
+}
+
 

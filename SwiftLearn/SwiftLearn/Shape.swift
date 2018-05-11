@@ -215,7 +215,8 @@ protocol Concat {
 	func add(_ it1 : Item, _ it2 : Item) -> String
 }
 
-class Sum<Item>: Concat {
+class Sum <T: Equatable> : Concat {
+	typealias Item = T
 	func add(_ it1 : Item, _ it2 : Item) -> String {
 		return "\(it1) + \(it2)"
 	}
